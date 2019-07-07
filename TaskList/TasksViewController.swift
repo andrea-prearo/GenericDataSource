@@ -97,7 +97,7 @@ extension TasksViewController {
         let originalTask =  taskViewModels[indexPath.section][indexPath.row].task
         let taskIndex: Int?
         if isGrouped {
-            taskIndex = tasks?.index {
+            taskIndex = tasks?.firstIndex {
                 return $0 == originalTask
             }
         } else {

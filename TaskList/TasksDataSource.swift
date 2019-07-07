@@ -35,7 +35,7 @@ class TasksDataSource: CollectionArrayDataSource<TaskViewModel, TaskCell> {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
-        case UICollectionElementKindSectionHeader:
+        case UICollectionView.elementKindSectionHeader:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TaskHeaderView.reuseIdentifier, for: indexPath)
             if let header = header as? TaskHeaderView {
                 header.sectionLabel.text = headerViewModels[indexPath.section].sectionText ?? ""
